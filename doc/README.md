@@ -1,6 +1,6 @@
 ## 小程序视频自定义控制组件
 
-###使用示例
+### 使用示例
 `<baby-viode mediaInfo="{{mediaInfo}}" bind:addMedieObj="addMedieObj"/>`
 
 ### 参数 mediaInfo
