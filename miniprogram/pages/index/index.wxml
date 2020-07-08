@@ -1,0 +1,1 @@
+<baby-viode mediaInfo="{{mediaInfo}}" bind:addMedieObj="addMedieObj"/>

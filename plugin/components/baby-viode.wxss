@@ -1,0 +1,90 @@
+.video-box {
+    position: relative;
+    overflow: hidden;
+  }
+  .video-box .video {
+    display: flex;
+    width: 100%;
+    height: 400rpx;
+    background: #ccc;
+    overflow: hidden;
+  }
+  .video-box .cover {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    overflow: hidden;
+  }
+  .video-box .play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+    background: rgba(153, 153, 153, 0.1);
+    overflow: hidden;
+  }
+  .video-box .load-box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+  .video-box .load-box .load {
+    display: block;
+    margin: auto;
+    width: 52rpx;
+    height: 52rpx;
+  }
+  .video-box .load-box .tips {
+    line-height: 56rpx;
+    font-size: 24rpx;
+    text-align: center;
+    color: #fff;
+  }
+  .video-box .controls {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 20rpx 20rpx;
+    width: 100%;
+    height: 70rpx;
+    line-height: 30rpx;
+    background: rgba(153, 153, 153, 0.1);
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .video-box .controls .change {
+    margin: 0 20rpx 0 0;
+    width: 30rpx;
+    height: 30rpx;
+    text-align: center;
+    float: left;
+  }
+  .video-box .controls .change .img {
+    width: auto;
+    height: 30rpx;
+  }
+  .video-box .controls .slider {
+    margin: auto;
+    padding: 0 16rpx;
+    overflow: hidden;
+  }
+  .video-box .controls .time {
+    display: inline-block;
+    padding: 0 10rpx;
+    font-size: 24rpx;
+    float: right;
+    color: #fff;
+  }
+  .video-box .controls .full {
+    width: 30rpx;
+    float: right;
+  }
+  

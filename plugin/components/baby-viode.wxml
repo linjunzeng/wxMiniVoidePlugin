@@ -1,0 +1,42 @@
+<view class="video-box">
+  <video
+    class="video"
+    id="{{mediaInfo.id}}"
+    src="{{mediaInfo.videoUrl}}"
+    controls="{{false}}"
+    show-center-play-btn="{{false}}"
+    object-fit="cover"
+    bindtimeupdate="timeupdate"
+    bindwaiting="waiting"
+    bindplay="play"
+    bindpause="pause"
+    bindended="ended">
+    <view
+      wx:if="{{timeInfo.currentTime === 0}}"
+      style="background-image: url({{mediaInfo.coverUrl}})"
+      class="cover">
+    </view>
+    <view wx:if="{{!isLoad && !isPlay}}">
+      <image class="play" bindtap="playMedia" src="../assets/images/video_icon_1.png" mode="widthFix"></image>
+    </view>
+    <view wx:if="{{isLoad}}" class="load-box">
+      <image class="load" src="../assets/images/video_icon_2.png" mode="widthFix"></image>
+      <view class="tips">视频缓存中</view>
+    </view>
+    <view class="controls">
+      <image wx:if="{{isFull}}" class="full" bindtap="full" src="../assets/images/video_icon_6.png" mode="widthFix"></image>
+      <image wx:else class="full" bindtap="full" src="../assets/images/video_icon_5.png" mode="widthFix"></image>
+      <view class="time">{{timeInfo.currentTimeTel}}/{{timeInfo.durationTel}}</view>
+      <view class="change" bindtap="playMedia">
+        <image wx:if="{{mediaObj && isPlay}}" class="img" src="../assets/images/video_icon_4.png" mode="heightFix"></image>
+        <image wx:else class="img" src="../assets/images/video_icon_3.png" mode="heightFix"></image>
+      </view>
+      <slider
+        class="slider"
+        :value="timeInfo.percen"
+        bindchange="changeMedia"
+        block-size="12"
+        activeColor="#FF7594"/>
+    </view>
+  </video>
+</view>

@@ -1,0 +1,6 @@
+{
+  "publicComponents": {
+    "baby-viode": "components/baby-viode"
+  },
+  "main": "index.js"
+}
